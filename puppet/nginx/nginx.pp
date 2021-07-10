@@ -1,5 +1,14 @@
+yumrepo { 'nginx':
+  descr    => 'nginx yum repository',
+  baseurl  => 'http://nginx.org/packages/centos/$releasever/$basearch/',
+  enabled  => 1,
+  gpgcheck => 1,
+  gpgkey   => 'https://nginx.org/keys/nginx_signing.key'
+}
+
 package { 'nginx':
   ensure  => installed,
+  require => Yumrepo['nginx'],
 }
 
 $port = 80
