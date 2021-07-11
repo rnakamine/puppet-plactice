@@ -3,8 +3,8 @@
 ```
 $ vagrant up
 $ vagrant ssh
-[vagrant@localhost ~]$ sudo yum -y update kernel
-[vagrant@localhost ~]$ exit
+[vagrant@puppet-book ~]$ sudo yum -y update kernel
+[vagrant@puppet-book ~]$ exit
 $ vagrant reload --provision
 ```
 
